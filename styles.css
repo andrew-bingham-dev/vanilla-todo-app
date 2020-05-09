@@ -1,0 +1,192 @@
+body {
+  font-family: roboto;
+  margin: 0;
+  background: linear-gradient(151.02deg, #FFFFFF -27.98%, rgba(254, 254, 254, 0.17) -27.97%, #A4A4A4 100.83%), #9E9E9E;
+  z-index: 0;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 5fr 5fr 5fr 1fr;
+  grid-template-rows: 20px 30px 20px 20px 30px 60px auto;
+}
+
+.app-bar {
+  grid-column: 1 / 7;
+  grid-row: 1 / 4;
+  color: white;
+  background: linear-gradient(126.44deg, #FFFFFF -54.67%, rgba(255, 255, 255, 0) 41.41%), #789DFD;
+  z-index: 1;
+}
+
+.app-bar-title {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  font-size: 30px;
+  color: white;
+  align-self: center;
+  text-align: start;
+  z-index: 2;
+}
+
+.add-item-panel {
+  grid-column: 1 / 7;
+  grid-row: 4 / 7;
+  background: linear-gradient(151.48deg, rgba(255, 255, 255, 0) 0.01%, #414141 14.18%), #4F4F4F;
+  z-index: 1;
+}
+
+.add-item-controls {
+  grid-column: 2 / 6;
+  grid-row: 5 / 6;
+  align-self: center;
+  justify-self: center;
+  z-index: 2;
+}
+
+.task-panel {
+  grid-column: 1 / 4;
+  grid-row: 7 / 8;
+  background: linear-gradient(151.02deg, #FFFFFF -27.98%, rgba(254, 254, 254, 0.17) -27.97%, #A4A4A4 100.83%), #9E9E9E;
+  z-index: 1;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  font-size: 14px;
+  color: white;
+  font-family: roboto;
+  min-width: 70px;
+  max-width: 100px;
+  min-height: 30px;
+  cursor: pointer;
+}
+
+/* # # # # # # # # # #   Add new item   # # # # # # # # # # */
+
+.btn-left {
+  background: #CA3E7A;
+  border-radius: 6px 0 0 6px;
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  justify-self: end;
+  z-index: 3;
+  user-select: none;
+}
+
+.btn-right {
+  background: #219653;
+  border-radius: 0 6px 6px 0;
+  grid-column: 5 / 6;
+  grid-row: 5 / 6;
+  justify-self: start;
+  z-index: 3;
+  user-select: none;
+}
+
+.txt-input {
+  grid-column: 3 / 5;
+  grid-row: 5 / 6;
+  border: 0;
+  margin: 0 10px;
+  padding: 0 5px;
+  font-size: 14px;
+  min-height: 30px;
+  min-width: 150px;
+  z-index: 3;
+}
+
+/* # # # # # # # # # #   List of tasks   # # # # # # # # # # */
+  
+#task-list {
+    grid-column: 2 / 6;
+    grid-row: 7 / 8;
+    display: grid;
+    grid-template-columns: 1fr 5fr 5fr 5fr 5fr 1fr;
+    /* grid-template-rows: 20px 30px 20px 20px 30px 60px auto; */
+    justify-self: center;
+  }
+
+.btn-list-left {
+  background: #CA3E7A;
+  border-radius: 6px 0 0 6px;
+  grid-column: 2 / 3;
+  /* grid-row: 7 / 8; */
+  justify-self: end;
+  z-index: 3;
+  user-select: none;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.btn-list-right {
+  background: #219653;
+  border-radius: 0 6px 6px 0;
+  grid-column: 5 / 6;
+  justify-self: start;
+  z-index: 3;
+  user-select: none;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.txt-list-input {
+  grid-column: 3 / 5;
+  border: 0;
+  margin: 0 10px;
+  padding: 0 5px;
+  font-size: 14px;
+  min-height: 30px;
+  min-width: 150px;
+  z-index: 3;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+
+/* # # # # # # # # # #   Tabs   # # # # # # # # # # */
+
+.tabs {
+  color: white;
+}
+
+.tab-todo {
+  grid-column: 3 / 4;
+  grid-row: 6 / 7;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: white;
+  z-index: 3;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  font-weight: 100;
+  user-select: none;
+}
+
+.tab-completed {
+  grid-column: 4 / 5;
+  grid-row: 6 / 7;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: white;
+  z-index: 3;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  font-weight: 100;
+  user-select: none;
+}
+
+.tab-active {
+  font-weight: 500;
+  border-bottom: 3px solid #CA3E7A;
+}
+
+
+.new-item {
+  color: white;
+  z-index: 4;
+}
