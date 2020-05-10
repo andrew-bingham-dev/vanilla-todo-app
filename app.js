@@ -12,50 +12,45 @@ let taskList = document.querySelector("#task-list")
 
 
 function addTask(taskDescription) {
-  itemIndex++;
   tasks = [...tasks, {
     "id": itemIndex,
     "description": taskDescription,
     "status": "active"
   }];
+  itemIndex++;
   document.getElementById('txt-add').value = "";
-  displayNewTask(tasks[0]);
+  displayNewTask(tasks[itemIndex - 1]);
 }
 
 
 function displayNewTask(newTask) {
-  let taskDiv = document.createElement("div");
-  taskDiv.id = newTask.id;
+  let taskLi = document.createElement("li");
+  taskLi.id = newTask.id;
 
   // Create left button
   let taskBtnLeft = document.createElement("button");
-  taskBtnLeft.classList.add("btn-list-left");
+  taskBtnLeft.classList.add("btn-left");
   taskBtnLeft.textContent = "Delete";
 
   // Create right button
   let taskBtnRight = document.createElement("button");
-  taskBtnRight.classList.add("btn-list-right");
+  taskBtnRight.classList.add("btn-right");
   taskBtnRight.textContent = "Complete"
 
   // Create the textbox
   let taskTextbox = document.createElement("input");
-  taskTextbox.classList.add("txt-list-input");
+  taskTextbox.classList.add("txt-input");
   taskTextbox.type = "text";
   taskTextbox.value = newTask.description;
 
-  // Add items to the div
-  taskDiv.appendChild(taskBtnLeft);
-  taskDiv.appendChild(taskTextbox);
-  taskDiv.appendChild(taskBtnRight);
+  // Add items to the li
+  taskLi.appendChild(taskBtnLeft);
+  taskLi.appendChild(taskTextbox);
+  taskLi.appendChild(taskBtnRight);
 
-  // Add div to the page
-  let listDiv = document.getElementById("task-list");
-  listDiv.appendChild(taskDiv);
-
-
-  // <button id="btn-clear" class="btn-left">Clear</button>
-  // <input id="txt-add" class="txt-input" type="text">
-  // <button id="btn-add" class="btn-right">Add</button>
+  // Add li to the ul
+  let listUl = document.getElementById("task-list");
+  listUl.appendChild(taskLi);
 }
 
 
