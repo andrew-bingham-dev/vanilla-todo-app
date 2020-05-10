@@ -9,15 +9,21 @@
 
   <body>
     <div class="container">
-      <div class="app-bar"></div>
-      <div class="app-bar-title">Todo App</div>
-      <div class="add-item-panel"></div>
-      <button id="btn-clear" class="btn-left">Clear</button>
-      <input id="txt-add" class="txt-input" type="text">
-      <button id="btn-add" class="btn-right">Add</button>
-      <div class="tab-todo tab-active">Todo</div>
-      <div class="tab-completed tab-inactive">Completed</div>
-      <div id="task-list"></div>
+      <div class="app-bar">
+        <div class="app-bar-title">Todo App</div>
+      </div>
+      <div class="add-item-panel">
+        <div class="add-item-controls">
+          <button id="btn-clear" class="btn-left">Clear</button>
+          <input id="txt-add" class="txt-input" type="text">
+          <button id="btn-add" class="btn-right">Add</button>
+        </div>
+        <div class="tabs">
+          <div class="tab-todo tab-active">Todo</div>
+          <div class="tab-completed tab-inactive">Completed</div>
+        </div>
+      </div>
+      <!-- <div id="task-list"></div> -->
     </div>
     <script src="app.js"></script>
   </body>
