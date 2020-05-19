@@ -13,7 +13,6 @@ body {
 .app-bar {
   position: fixed;
   display: flex;
-  color: white;
   height: 50px;
   width: 100%;
   background: linear-gradient(126.44deg, #FFFFFF -54.67%, rgba(255, 255, 255, 0) 41.41%), #789DFD;
@@ -23,9 +22,9 @@ body {
 .app-bar-title {
   align-self: center;
   font-size: 30px;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: start;
-  padding-left: 10%;
+  padding-left: 5%;
   min-width: fit-content;
   z-index: 1;
 }
@@ -61,19 +60,21 @@ button {
   max-width: 100px;
   min-height: 30px;
   cursor: pointer;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
+
 
 /* # # # # # # # # # #   Add new item   # # # # # # # # # # */
 
 .btn-left {
-  margin-left: 10%;
+  margin-left: 5%;
   background: #CA3E7A;
   border-radius: 6px 0 0 6px;
   user-select: none;
 }
 
 .btn-right {
-  margin-right: 10%;
+  margin-right: 5%;
   background: #219653;
   border-radius: 0 6px 6px 0;
   user-select: none;
@@ -87,7 +88,14 @@ button {
   height: 30px;
   min-width: 100px;
   flex: auto;
+  color: white;
 }
+
+#txt-add {
+  background: #4F4F4F;
+  box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3);
+}
+
 
 /* # # # # # # # # # #   Tabs   # # # # # # # # # # */
 
@@ -122,6 +130,7 @@ button {
   border-bottom: 3px solid #CA3E7A;
 }
 
+
 /* # # # # # # # # # #   List of tasks   # # # # # # # # # # */
 
 li {
@@ -129,6 +138,7 @@ li {
   width: 100%;
   margin-bottom: 10px;
   background: transparent;
+  
 }
 
 #task-list {
@@ -140,7 +150,16 @@ li {
   height: 100%;
   align-items: center;
   background: transparent;
-  /* background: linear-gradient(151.02deg, #FFFFFF -27.98%, rgba(254, 254, 254, 0.17) -27.97%, #A4A4A4 100.83%), #9E9E9E; */
+}
+
+#task-list .btn-left {
+  background: #414141;
+  color: #CA3E7A;
+}
+
+#task-list .btn-right {
+  background: #414141;
+  color: #219653;
 }
 
 .scrollable {
@@ -148,7 +167,12 @@ li {
   top: 150px;
   height: 100%;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: hidden;
   background: transparent;
   z-index: 1;
+}
+
+li .txt-input {
+  background: #414141;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
